@@ -1,0 +1,178 @@
+/* Two Sisters Account
+--------------------------------------------- */
+
+// Login / Register Screen
+
+.page-id-23{
+    .site-main{
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+
+		@media(min-width: 800px){
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+
+    .col2-set{
+        max-width: 500px;
+        
+        input{
+			width: 100%;
+			padding: .7rem;
+			background: $tsGrey;
+			border: 1px solid #e1e1e1;
+			font-size: 0.8rem;
+		}
+
+		textarea {
+			font-size: 0.8rem;
+			padding: .7rem;
+		}
+
+		label, span{
+			font-size: 0.9rem;
+		}
+
+        .button{
+            padding: .95rem 1.5rem;
+            background: $tsBlue;
+            color: white;
+        }
+
+        .woocommerce-form-login .button{
+            margin-top: 1.5rem;
+        }
+    }
+
+}
+
+// My Account
+
+.page-id-23.logged-in{
+
+    .woocommerce{
+        @media(min-width: 768px){
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-gap: 5rem;
+        }
+
+        .woocommerce-orders-table{
+            border-spacing: 1rem;
+
+            a{
+                color: $tsBlue;
+            }
+        }
+
+        .woocommerce-MyAccount-content a{
+            color: $tsBlue;
+        }
+    }
+}
+
+// Account navigation
+
+.woocommerce-account{
+
+    h1{
+        padding-bottom: 1rem;
+    }
+
+    td::before{
+        font-weight: bold;
+    }
+
+    .woocommerce-MyAccount-navigation{
+    
+        ul{
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        li{
+            padding: 1rem 0;
+            border-bottom: 1px solid $tsMint;
+        }
+
+    }
+
+    // Payment Methods
+
+    .woocommerce-MyAccount-paymentMethod a.button{
+        color: $tsBlue;
+    }
+
+    ul.woocommerce-PaymentMethods{
+        padding-left: 0;
+        margin-left: 0;
+
+        .woocommerce-Button{
+            padding: .95rem 1.5rem;
+            background: $tsBlue;
+            color: white;
+        }
+    }
+    
+    // Edit Account Form & Address Fields
+
+    .woocommerce-EditAccountForm, .woocommerce-address-fields{
+
+        input{
+			padding: .7rem;
+			background: $tsGrey;
+			border: 1px solid #e1e1e1;
+			font-size: 0.8rem;
+            width: 100%;
+		}
+
+		textarea {
+			font-size: 0.8rem;
+			padding: .7rem 1.8rem;
+		}
+
+		label, span{
+			font-size: 0.9rem;
+		}
+
+        fieldset p{
+            padding: 0 1rem;
+        }
+        
+        .button{
+            padding: .95rem 1.5rem;
+            background: $tsBlue;
+            color: white;
+        }
+
+		width: 100%;
+
+    }
+
+    // View Order Details
+
+    .woocommerce-order-details{
+
+		h2.woocommerce-order-details__title{
+			padding-top: 2.5rem;
+		}
+
+		th{
+			background: $tsGrey;
+			padding: 1.5rem;
+			width: 165px;
+			font-size: 0.9rem;
+		}
+
+		td{
+			background: #fcfcfc;
+			padding: 1.5rem;
+			font-size: 0.8rem;
+		}
+
+		.woocommerce-table--order-details{
+			max-width: 550px;
+		}
+	}
+}

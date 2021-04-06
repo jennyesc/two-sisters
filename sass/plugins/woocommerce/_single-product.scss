@@ -1,0 +1,287 @@
+//Two Sisters Bakery Single Product Pages Styles
+
+	.product-template-default{
+
+		.woocommerce-breadcrumb{
+			margin: 20px 0 30px 0;
+			font-size: 0.9rem;
+			color: $tsBrown;
+		}
+	}
+
+	.entry-summary{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		.product_title{
+			font-size: 26px;
+			text-align: left;
+			color: $tsBrown;
+			max-width: 500px;
+			margin-bottom: 0;
+
+		}
+		.price{
+			font-size: 18px;
+			text-align: left;
+			color: $tsBrown;
+			margin: 14px 0 20px 0;
+		}
+		.cart{
+			text-align: left;
+			display: flex;
+			flex-wrap: wrap;
+			width: 200px;
+			.quantity{
+				text-align: left;
+				input[type=number]{
+					color: $tsBrown;
+					text-align: center;
+					border: 1px solid #ccc;
+					border-radius: 3px;
+					padding: 10px 3px;
+					width: 58px;
+					margin-right: 4px;
+				}
+			}
+			.single_add_to_cart_button{
+				background-color: $tsBlue;
+				color: white;
+				font-weight: $tsSemi;
+				padding: 10px 16px;
+				width: 138px;
+			}
+		}
+		.wl-add-to-single{
+			font-weight: $tsSemi;
+		} 
+		#wl-wrapper.wl-button-wrap {
+			padding-top: 20px;
+
+			ul{
+				padding: 10px 0 10px 0;
+				margin: 0;
+
+				a{
+					color: $tsBlue;
+				}
+			}
+		}
+		.product_meta{
+			display: none;
+		}
+	}
+
+	.tabs, .wc-tabs{
+		display: none;
+	}
+
+	.woocommerce-tabs{
+
+		.woocommerce-Tabs-panel{
+			margin: 0 auto;
+			@media(min-width: 400px){
+				display: block;	
+			}
+		} 
+	}
+	
+.single-product {
+
+	// Link Colour
+	a.button{
+		color: $tsBlue;
+	}
+
+	// Page Grid
+	.product{
+		display: block;
+
+		@media(min-width: 720px){
+			display: grid;
+			grid-gap: 3rem;
+			grid-row-gap: 2rem;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media(min-width: 900px){
+			grid-gap: 2rem;
+			grid-row-gap: 1rem;
+		}
+	}
+
+	.woocommerce-tabs,
+	.products{
+		grid-column: 1 / 3;
+	}
+
+	.related .product{
+		display: block;
+	}
+
+	div.product {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+			max-width: 400px;
+
+			@media(min-width: 720px){
+				margin: 0;
+			}
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 2em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+			.woocommerce-product-gallery__wrapper{
+					max-width: 400px;
+  					height: auto;
+					
+				.woocommerce-product-gallery__image{
+					border-radius: 3px;
+					margin: 0 auto;
+					object-fit: cover;
+					cursor: pointer;
+				}
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.related{
+
+	h2{
+		padding: 20px 0 15px 0;
+		@media(min-width: 720px){
+			padding: 0 0 15px 0;
+		}
+	}
+
+	.columns-3, .columns-2{
+		max-width: 2000px;
+		overflow: hidden;
+		text-align: center;
+       	display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+	
+		li{
+			list-style: none;
+			position: relative;
+			margin: 0 1rem 2rem 0;
+
+			&:last-of-type{
+				margin-right: 0;
+			}
+		}
+		
+		.woocommerce-loop-product__title{
+			font-size: 16px;
+			text-align: center;
+			padding: 10px 0 5px 0; 
+			margin: 0 auto;
+			color: $tsBrown;
+			font-weight: 700;
+			opacity: 0.75;
+			position: relative;
+					
+		}
+
+		.woocommerce-Price-amount{
+			color: $tsBrown;
+			
+		}
+		.product_type_simple,
+		.added_to_cart{ 
+			font-size: 14px;
+			text-align: center;
+			color: white;
+			background-color: $tsBlue;
+			font-weight: $tsSemi; 
+			padding: 12px;
+			margin: 14px 0;
+				
+		}
+
+		.added_to_cart {
+			width: 250px;
+			position: relative;
+			top: -48px;
+		}
+	}	
+}
+
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+

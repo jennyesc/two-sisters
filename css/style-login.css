@@ -1,0 +1,36 @@
+
+body.login {
+    background: #efe9db;
+}
+
+body.login div#login form#loginform {
+    background: #efe9db;
+    border-radius: 20px;
+    border: none;
+    -webkit-box-shadow: 3px 2px 5px -1px rgba(82,55,38,0.15);
+    -moz-box-shadow: 3px 2px 5px -1px rgba(82,55,38,0.15);
+    box-shadow: 3px 2px 5px -1px rgba(82,55,38,0.25); 
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    background: #509090;
+}
+
+body.login div#login form#loginform input {
+    border: none;
+}
+
+.login #login_error, .login .message, .login .success{
+    border-left: 4px solid #509090;
+    background: #fff;
+}
+.login h1 a {
+	background-image: url('../images/TwoSisters-login.png');
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+    height: 165px;
+    width: auto;
+    padding-bottom: 30px;
+    text-indent: -9999px;
+}

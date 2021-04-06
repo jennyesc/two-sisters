@@ -1,0 +1,80 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+//Two-Sisters Mixins
+
+@mixin button{
+	border-radius: $border4;
+	background-color: $tsBlue;
+	color: #fff;
+	padding: 10px;
+}
+
+@mixin box-shadow{
+	-webkit-box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.08);
+	box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.08);
+}
+
+@mixin top-shadow{
+	-webkit-box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.08);
+	box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.08);
+}
+
+// CTA BUTTONS
+@mixin cta-title{
+	margin: 0;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: white 1px solid;
+	border-radius: 2px;
+	color: white;
+	font-size: 1.75rem;
+	padding: 10px;
+	width: 170px;
+	position: absolute;
+	font-family: "Lora";
+	font-weight: $tsSemi;
+	z-index: 999;
+}
+
+@mixin cta-hover-button{
+	background:rgba(255, 255, 255, 0.7);
+	border: 1px solid white;
+    color: $tsBlue;
+	text-shadow: 1px 1px 1px rgba(42,66,66,0.27);
+	transition: 0.25s;
+}
+
+//underline animation on hover cta
+
+@mixin underline-cta{
+	&::after{
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		border-radius: 2px;
+		background: white;
+		transition: width .6s;
+		margin-top: 20px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	&:hover::after{
+		width: 40%;
+	}
+}

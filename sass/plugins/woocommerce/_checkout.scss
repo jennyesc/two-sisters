@@ -1,0 +1,270 @@
+
+
+/* Two Sisters Checkout
+--------------------------------------------- */
+
+ .page-id-22{
+
+	.site-main{
+
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+
+		@media(min-width: 800px){
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+
+	td::before{
+		font-weight: bold;
+	}
+
+	.button{
+		padding: .95rem 1.5rem;
+		outline: none;
+	}
+
+	button{
+		color: black;
+	}
+
+	.actions .button{
+		width: auto;
+	}
+
+	.col2-set{
+		width: 100%;
+	}
+
+	.woocommerce-checkout{
+
+		@media(min-width: 800px){
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-gap: 3rem;
+			grid-row-gap: 0;
+		}
+	}
+
+	#customer-details{
+		grid-column-start: 1;
+	}
+
+	#order_review_heading{
+		display: none;
+	}
+
+	#order_review{
+		grid-column-start: 2;
+	}
+
+	.woocommerce-checkout-review-order{
+
+		th{
+			background: $tsGrey;
+			padding: 1.5rem;
+			width: 165px;
+			font-size: 0.9rem;
+		}
+
+		td{
+			background: #fcfcfc;
+			padding: 1.5rem;
+			font-size: 0.8rem;
+		}
+	}
+
+
+	// Checkout
+
+	.col2-set, .woocommerce-form-login, .woocommerce-form-coupon{
+
+		input{
+			width: 100%;
+			padding: .7rem;
+			background: $tsGrey;
+			border: 1px solid #e1e1e1;
+			font-size: 0.8rem;
+		}
+
+		textarea {
+			font-size: 0.8rem;
+			padding: .7rem;
+		}
+
+		label, span{
+			font-size: 0.9rem;
+		}
+
+		.form-row.create-account label,
+		#ship-to-different-address label{
+			display: flex;
+
+			input{
+				width: 15px;
+				margin: 5px 10px 0 0;
+			}
+		}
+	}
+
+	.woocommerce-form-login{
+		input{
+			width: 50%;
+		}
+	}
+
+	.form-row-first{
+		margin-right: 5px;
+	}
+
+	.form-row label{
+		display: block;
+	}
+
+	// Order Review
+
+	ul.woocommerce-order-overview{
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.woocommerce-order-details{
+
+		h2.woocommerce-order-details__title{
+			padding-top: 2.5rem;
+		}
+
+		th{
+			background: $tsGrey;
+			padding: 1.5rem;
+			width: 165px;
+			font-size: 0.9rem;
+		}
+
+		td{
+			background: #fcfcfc;
+			padding: 1.5rem;
+			font-size: 0.8rem;
+		}
+
+		.woocommerce-table--order-details{
+			max-width: 550px;
+		}
+	}
+
+	.woocommerce-customer-details--phone{
+		margin-bottom: 0;
+	}
+
+	.woocommerce-customer-details--email{
+			margin-top: 0;
+		}
+
+	// Payment Methods
+
+	.wc_payment_methods{
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#payment .payment_methods > li:not(.woocommerce-notice) {
+		background-color: #f5f5f5;
+		background: $tsGrey;
+		font-size: 0.9rem;
+
+		label[for="payment_method_stripe"]{
+			margin-left: 1.5rem;
+			line-height: 75px;
+		}
+	}
+
+	#payment .payment_methods > li .payment_box, #payment .place-order {
+		background-color: #fcfcfc;
+		padding: 1.5rem;
+
+		p{
+			font-size: 0.9em;
+		}
+
+		.wc-credit-card-form{
+			border: 1px solid rgb(181, 181, 181);
+			margin-top: 1rem;
+			padding: 1.5rem;
+		}
+	}
+}
+
+.page-id-21 input, button{
+	background: $tsGrey;
+	border: 1px solid #e1e1e1;
+}
+
+.page-id-22 button{
+	background: $tsBlue;
+	border: 1px solid $tsBlue;
+	color: white;
+	margin-top: 2rem;
+}
+
+// Login Checkout
+
+.woocommerce-form-login{
+	margin-bottom: 2rem;
+
+	label.woocommerce-form-login__rememberme{
+		display: flex;
+		width: 200px;
+
+		input{
+			width: 10px;
+			margin-right: 5px;
+			margin-top: 5px;
+		}
+	}
+
+	.lost_password{
+		padding-top: 1rem;
+		font-size: 0.8rem;
+		
+		a{
+			color: $tsBlue;
+		}
+
+		&:hover{
+			text-decoration: underline;
+			color: $tsBlue;
+		}
+	}
+}
+
+// Coupon Code
+
+.woocommerce-form-coupon{
+	padding-bottom: 3rem;
+	max-width: 330px;
+
+	p{
+		margin-bottom: 0;
+	}
+
+	.button{
+		display: inline-block;
+		margin: 0 auto;
+		height: 43.6px;
+		padding: 0 1.5rem;
+	}
+
+	.form-row-last{
+		vertical-align: top;
+	}
+
+	.form-row-first input{
+		max-width: 150px;
+		@media(min-width: 768px){
+			max-width: 220px;
+		}
+	}
+}
+

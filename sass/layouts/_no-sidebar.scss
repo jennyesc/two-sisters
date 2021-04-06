@@ -1,0 +1,26 @@
+
+.site {
+	max-width: $siteWidth;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+	grid-template-areas:
+		" header header header "
+		". main ."
+		" footer footer footer ";
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+	padding: $padding;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+

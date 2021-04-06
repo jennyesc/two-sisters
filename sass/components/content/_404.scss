@@ -1,0 +1,189 @@
+//styles for the 404 page
+
+
+.error-404{
+    min-height: 400px;
+    
+    .not-found{
+        margin-top: 2rem;
+        color: $tsBrown;
+        @media(min-width: 550px){
+            margin-top: 4rem;
+        }
+
+        header{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 100%;
+
+           .four-o-four-box{
+                width: 250px;
+                height: 200px;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                margin: 0;
+                padding: 0;
+
+               p{
+                   font-weight: $tsBlack;
+                   font-size: 7.5rem;
+                   margin: 0;
+                   padding: 0;
+                   position: absolute;
+               }
+
+               .donut{
+                    background: url(images/donut.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;   
+                    background-size: contain;
+                    max-height: 127px;
+                    min-height: 127px;     
+                    width: 127px;
+                    z-index: 999;
+                    position: absolute;
+                    animation: donut 5s infinite alternate;
+
+                    @keyframes donut{
+                        0%{
+                            transform: rotate(0deg);
+                        }
+                        50%{
+                            transform: rotate(5deg);
+                        }  
+                        100%{
+                            transform: rotate(0deg);
+                        }
+                    }
+               }
+
+               .first-four{
+                   text-align: right;
+                   z-index: 800;
+                   left: 10px;
+               }
+
+               .last-four{
+                   text-align: left;
+                   z-index: 900;
+                   right: 10px;
+               }
+
+               @media(min-width: 550px){
+                   width: 500px;
+                   height: 250px;
+                  
+                   p{
+                       font-size: 15rem;
+                   }
+
+                   .donut{
+                    max-height: 255px;
+                    min-height: 255px;     
+                    width: 250px;
+                   }
+                   .first-four{
+                       left: 8px
+                   }
+
+                   .last-four{
+                       right: 12px;
+                   }
+               }
+           }
+
+           h1{
+               text-align: center;
+               font-size: 5rem;
+               font-weight: $tsBlack;
+               margin-top: 0;
+               margin-bottom: 0;
+               width: 250px;
+
+               @media (min-width: 550px){
+                   font-size: 9rem;
+                   width: 500px;
+               }
+           }
+        } //end header
+
+        .page-content{
+            h2, p{
+                text-align: center;
+            }
+            
+            nav{
+                margin: 0 auto;
+                padding: 0;
+                height: 250px;
+                width: 250px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .a-shop{
+                    background: url(images/donut1.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;   
+                    background-size: contain;
+                    margin-left: 20px;
+
+                    &:hover{
+                        transition: 0.8s ease-in-out;
+                        transform: rotate(80deg);
+                    }
+                }
+
+                .a-contact{
+                    background: url(images/donut2.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;   
+                    background-size: contain;
+                    margin-left: 20px;
+
+                    &:hover{
+                        transition: 0.8s ease-in-out;
+                        transform: rotate(-50deg);
+                    }
+                }
+
+                .shop-text, .contact-text{
+                    padding: 25px 15px 25px 10px;
+                    align-self: center;
+                    font-size: 1.2rem;
+                    color: $tsBrown;
+                    font-weight: $tsBold;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        border-radius: 2px;
+                        background: $tsBlue;
+                        transition: width .6s;
+                        
+                        margin: 0 auto;
+                        text-align: left;
+                        left:0;
+                    }
+                
+                    &:hover::after{
+                        width: 100%;
+                    }
+                }
+
+                @media(min-width: 550px){
+                    grid-template-columns: 1fr 1fr;
+                    height: 150px;
+                    grid-row-gap: 1.25rem;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+

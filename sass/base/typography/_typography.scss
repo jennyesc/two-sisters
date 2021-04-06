@@ -1,0 +1,31 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-size: 1rem;
+	line-height: $font__line-height-body;
+}
+
+@import "headings";
+@import "copy";
+
+//Two Sisters Typography Styles
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $tsHeading;
+    font-weight: $tsSemi;
+}
+
+body{
+    font-family: $tsBody;
+}
+
+p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}

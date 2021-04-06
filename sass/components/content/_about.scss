@@ -1,0 +1,149 @@
+/* Two Sisters About
+--------------------------------------------- */
+
+
+
+
+.about-main{
+
+    .about-container{
+
+        .about-intro-content{  
+            
+            h2{
+                font-size: 32px;
+            }
+            @media screen and (min-width: 800px){
+                display: block;
+                width: 60%;
+            }
+        }// .about-intro-content
+                 
+            .about-image{
+                display: block;
+                -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 55% 0);
+                clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 55%, 55% 0);
+                
+                img{
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+    
+                    @media screen and (min-width: 800px){
+                        padding-left: 3rem;
+                        padding-top: 20px;
+                    }
+                }
+                @media screen and (min-width: 800px){
+                    max-width: 428px;
+                    width: 40%;
+                } 
+            }// about-image
+
+            .about-image-two{
+                
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: $border4;
+        
+                    @media screen and (min-width: 800px){
+                        padding-right: 3rem;
+                    }
+                }
+    
+                @media screen and (min-width: 800px){
+                    max-width: 428px;
+                    height: 355px;
+                    width: 40%;
+                } 
+            }// .about-image-two
+
+        @media screen and (min-width:550px){
+            max-width: 450px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }             
+
+        @media screen and (min-width: 800px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+    }// about-container
+    
+    .bakery{
+        padding-bottom: 10px;
+        @media screen and (min-width: 800px){
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+        }    
+
+    }
+
+
+    // Section
+    .cta-image-container{
+        
+        @media screen and (min-width: 800px){
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .cta-container{
+            display: block;
+            position: relative;
+            padding-bottom: 10px;
+
+            @media screen and (min-width:550px){
+                max-width: 450px;
+                margin: 0 auto;
+            } 
+            @media screen and (min-width: 800px){
+                max-width: 48%;
+                margin: 0;
+            }
+
+            a{
+                .title{
+                    text-align: center;
+                    padding: 1rem;
+                    border-radius: $border4;
+                    text-shadow: $headingShadow;
+                    font-size: 1.5rem;
+                    color: white ; 
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    right: 0;
+                    z-index: 999;
+
+                    &:hover{
+                        text-shadow: 2px 2px 1px rgba(45, 45, 45, 0.95);
+                    }
+
+                    @include underline-cta();
+
+                    @media screen and (min-width:800px){
+                        font-size: 2rem;    
+                    }  
+                }
+    
+                img{
+                    filter: brightness(90%);
+                    object-fit: cover;
+                }
+            }
+        }// cta-container
+    }// section cta-image-container
+} // .about-main

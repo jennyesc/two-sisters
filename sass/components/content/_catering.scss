@@ -1,0 +1,51 @@
+/* Two Sisters Catering
+--------------------------------------------- */
+
+.catering-banner img{
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.catering-form-container{
+
+    @media(min-width: 800px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+    }
+
+    @media(min-width: 985px){
+        img{
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: $border4;
+        }
+    }
+}
+
+.catering-wrapper{
+    padding-top: 0.5rem;
+
+    @media(min-width: 1000px){
+        padding: 2rem 0 5rem 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+}
+
+.catering-message{
+   padding-bottom: 0.5rem;
+   margin: 0 auto;
+   @media(min-width: 800px){
+       padding-bottom: 2rem;
+   }
+}
+
+.catering-form{
+    padding-bottom: 2rem;
+    @media(min-width: 800px){
+        padding-bottom: 0;
+    }
+}

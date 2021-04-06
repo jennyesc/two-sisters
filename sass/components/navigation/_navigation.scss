@@ -1,0 +1,126 @@
+/* Two Sisters Navigation
+--------------------------------------------- */
+
+
+.main-navigation {
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 8rem;
+	right: 0;
+	z-index: 1000;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		background-color: $tsGrey;
+	}
+
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+			color: $tsBrown;
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		text-align: left;
+		padding: 16px;
+		margin: 0 20px 0 20px;
+		color: $tsBrown;
+	}
+
+	svg{
+		fill: $tsBrown;
+	}
+
+
+}
+
+.menu-toggle {
+	position: absolute;
+	top: -5rem;
+	right: .3rem;
+	z-index: 1100;
+	display: block;
+	width: 3.75rem;
+	padding: 1rem;
+	margin: 0;
+	border: none;
+	background: transparent;
+	fill: $tsBrown;
+}
+
+.main-navigation.toggled ul{
+	display: block;
+	// margin-top: 45px;
+	
+}
+
+
+@media screen and (min-width: 50em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation {
+		width: auto;
+		position: static;
+		top: 0;
+		align-self: center;
+		margin-left: auto;
+		// grid-column: 3/4;
+		padding-top: 16px;
+	}
+
+	.main-navigation ul,
+	.main-navigation.toggled ul {
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	.main-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+		background-color:  $tsGrey;
+		flex-direction: column;
+	}
+	
+	.main-navigation ul ul a {
+		left: -999em;
+		top: 0;
+		width: 200px;
+		text-align: left;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: 100%;
+		top: 0;
+	}
+	
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		left: auto;
+	}
+	a{
+		padding: 0;
+		margin: 0;
+	}
+
+	
+}
+
+

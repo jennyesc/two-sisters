@@ -1,0 +1,214 @@
+
+/* Two Sisters Cart
+--------------------------------------------- */
+
+.page-id-21{
+	h1{
+		text-align: center;
+		margin-bottom: 0;
+			@media(min-width: 768px){
+				text-align: left;
+				margin-bottom: 0.67em;
+			}
+	}
+	.site-main{
+
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+
+		@media(min-width: 768px){
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+
+	// Cart Empty
+
+	a.button.wc-backward{
+		background: $tsBlue;
+		color: white;
+		padding: 16px 22px;
+	}
+
+	// Cart with Items
+
+	td::before{
+		font-weight: bold;
+	}
+
+	.product-remove{
+		padding-bottom: 0.5rem;
+		position: relative;
+		@media(min-width: 768px){
+			padding-bottom: 0;
+			width: 100px;
+		}
+
+		a.remove{
+			background: $tsBrown;
+			color: white;
+			font-weight: $tsBold;
+			border-radius: 50%;
+			padding: .2rem .5rem .2rem .5rem;
+
+			@media(min-width: 768px){
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 0 .5rem .2rem .5rem;
+			}
+		}
+	}
+
+	.woocommerce-cart-form{
+		font-size: 0.9em;
+		
+		table{
+			border-collapse:separate; 
+			border-spacing: 2.5rem;
+			@media(min-width: 768px){
+				border-spacing: 0;
+			}
+		}
+
+		th{
+			background: $tsGrey;
+			padding: 1.5rem 0;
+		}
+
+		td{
+			padding: 1rem 0 1rem 1rem;
+			max-width: 400px;
+			margin: 0 auto;
+			@media(min-width: 768px){
+				padding-left: 0;
+			}
+		}
+
+		td:nth-child(even){
+			background: #f7f7f7;
+
+			@media(min-width: 768px){
+				background: none;
+			}
+		}
+	}
+
+	.product-price{
+		@media(min-width: 768px){
+			width: 85px;
+		}
+	}
+
+	.attachment-woocommerce_thumbnail{
+		border-radius: $border4;
+		width: 110px;
+		height: 110px;
+	}
+
+	.product-thumbnail::before{
+		display: none;
+	}
+
+	td.product-quantity .qty{
+		padding: .4rem;
+		width: 3.5rem;
+		text-align: center;
+	}
+
+	td.actions{
+		padding: 1.5rem 0 0 0;
+		background: transparent;
+		position: relative;
+	}
+
+	.button[name="update_cart"]{
+		@media(min-width: 768px){
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin-top: 1.5rem;
+		}
+	}
+
+	.coupon{
+		margin-left: auto;
+		@media(min-width: 768px){
+			margin-bottom: 0;
+			width: 100%;
+			display: flex;
+		}
+
+		input{
+			padding: .7rem;
+			margin-bottom: 5px;
+
+			@media(min-width: 516px){
+				margin-bottom: 0;
+				margin-right: 5px;
+			}
+		}
+
+		label{
+			display: none;
+		}
+	}
+
+	.button{
+		padding: .95rem 1.5rem;
+		outline: none;
+	}
+
+	button{
+		color: black;
+	}
+
+	.actions .button{
+		width: 148.8px;
+		margin-bottom: 5px;
+		cursor: pointer;
+
+		@media(min-width: 768px){
+			margin-bottom: 0;
+		}
+	}
+
+	// Cart Totals
+	a.checkout-button{
+		background: $tsBlue;
+		border: 1px solid $tsBlue;
+		color: white;
+		width: 100%;
+		text-align: center;
+	}
+
+	.cart_totals{
+		max-width: 300px;
+		margin: 0 auto;
+		@media(min-width: 600px){
+			max-width: 400px;
+		}
+
+		@media(min-width: 768px){
+			margin: 4rem 0 0 auto;
+		}
+
+		th{
+			background: $tsGrey;
+			padding: 1.5rem;
+			width: 165px;
+			font-size: 0.9rem;
+		}
+
+		td{
+			background: #fcfcfc;
+			padding: 1.5rem;
+			font-size: 0.8rem;
+		}
+
+		.button{
+			display: inline-block;
+		}
+	}
+}
