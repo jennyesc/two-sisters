@@ -269,13 +269,6 @@ function my_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
-// Google Maps API Key Method 1: Filter.
-function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyAcvAEXBQ33tMdZA2yB1HWovu8pbx5Qoj4';
-    return $api;
-}
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
 
 //  Disable Reviews
 function iconic_disable_reviews() {
